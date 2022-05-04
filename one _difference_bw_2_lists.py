@@ -5,6 +5,12 @@ Output:
 ['c', 'd']
 aabbc bbaad
 '''
+def sorted_l(l1):
+    d1={}
+    for i in l1:
+        for j in i:
+            d1[j]=d1.get(j,0)+1
+    return dict(sorted(d1.items(),key=lambda kv:kv[0]))
 def one_diff_list(list_1,list_2):
     '''There are two lists having string elements, \
     I wanted the elements which are having\
